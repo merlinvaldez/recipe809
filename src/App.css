@@ -1,0 +1,135 @@
+/* App-level tweaks on top of Pico.css */
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main.container {
+  text-align: left;
+}
+
+/* Enhanced typography */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Custom color palette */
+:root {
+  --primary: #ff6b35;
+  --accent: #f7c59f;
+  --success: #4caf50;
+  --warning: #ff9800;
+}
+
+/* Responsive card grid */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.cards article img {
+  border-radius: 0.5rem;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  transition: transform 0.2s ease;
+}
+
+.cards article {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cards article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.cards article:hover img {
+  transform: scale(1.05);
+}
+
+.cards article h3 {
+  margin-bottom: 0.25rem;
+}
+
+.cards article small {
+  color: var(--muted-color);
+}
+
+/* Button enhancements */
+button {
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Filter badges */
+.filter-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--text);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  margin: 0.25rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  #root {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  main.container {
+    padding: 0.5rem;
+  }
+
+  .cards {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .cards article img {
+    aspect-ratio: 3 / 2;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+footer.container {
+  margin-top: 2rem;
+  text-align: center;
+}
