@@ -2,12 +2,12 @@ import type { Recipe } from "../types";
 
 const foodImages: Record<string, string> = {
   "margherita pizza": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop",
-  "garlic butter shrimp pasta": "https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?w=400&h=300&fit=crop",
+  "garlic butter shrimp pasta": "https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?w=400&h=300&fit=crop",
   "buddha bowl": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop",
   "gluten free pancakes": "https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=400&h=300&fit=crop",
   "chicken tikka masala": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&h=300&fit=crop",
   "caprese salad": "https://images.unsplash.com/photo-1546793665-c74683f339c1?w=400&h=300&fit=crop",
-  "beef tacos": "https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=400&h=300&fit=crop",
+  "beef tacos": "https://images.pexels.com/photos/2092507/pexels-photo-2092507.jpeg?w=400&h=300&fit=crop",
   "avocado toast": "https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=400&h=300&fit=crop",
   "grilled salmon": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400&h=300&fit=crop",
   "chocolate brownies": "https://images.unsplash.com/photo-1607478900766-efe13248b125?w=400&h=300&fit=crop",
@@ -16,7 +16,7 @@ const foodImages: Record<string, string> = {
 };
 
 const img = (query: string) =>
-  foodImages[query] || "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=300&fit=crop";
+  foodImages[query] || "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=400&h=300&fit=crop";
 
 export const recipes: Recipe[] = [
   {

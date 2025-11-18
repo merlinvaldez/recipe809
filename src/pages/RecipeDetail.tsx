@@ -57,7 +57,7 @@ export default function RecipeDetail() {
           loading="lazy"
           onError={(e) => {
             (e.currentTarget as HTMLImageElement).src =
-              "https://source.unsplash.com/featured/?food&w=800&h=600";
+              "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=800&h=600&fit=crop";
           }}
         />
         <figcaption>

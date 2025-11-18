@@ -210,7 +210,7 @@ export default function Home() {
                   loading="lazy"
                   onError={(e) => {
                     (e.currentTarget as HTMLImageElement).src =
-                      "https://source.unsplash.com/featured/?food&w=400&h=300";
+                      "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=400&h=300&fit=crop";
                   }}
                 />
                 <h3>{r.title}</h3>

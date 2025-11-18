@@ -2,26 +2,42 @@
 #root {
   max-width: 1200px;
   margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Elegant shadow */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  min-height: 80vh;
 }
 
 main.container {
   text-align: left;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(245, 245, 220, 0.8) 100%);
+  border-radius: 0.5rem;
+  padding: 2rem;
 }
 
 /* Enhanced typography */
 h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--primary);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--secondary);
+  margin-bottom: 1rem;
 }
 
 h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 0.5rem;
 }
 
 /* Custom color palette */
@@ -36,32 +52,36 @@ h3 {
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
+  gap: 2rem; /* Increased gap for better spacing */
 }
 
 .cards article img {
-  border-radius: 0.5rem;
+  border-radius: 1rem 1rem 0 0; /* Rounded top corners only */
   object-fit: cover;
   aspect-ratio: 4 / 3;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .cards article {
   display: flex;
   flex-direction: column;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(145deg, #ffffff 0%, #f9f9f9 100%);
+  border: 1px solid rgba(210, 105, 30, 0.1);
 }
 
 .cards article:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
 .cards article:hover img {
-  transform: scale(1.05);
+  transform: scale(1.08);
+  filter: brightness(1.1) contrast(1.05);
 }
 
 .cards article h3 {
@@ -74,11 +94,15 @@ h3 {
 
 /* Button enhancements */
 button {
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 button:active {
@@ -130,6 +154,25 @@ button:active {
 }
 
 footer.container {
-  margin-top: 2rem;
+  margin-top: 3rem;
   text-align: center;
+  background: linear-gradient(145deg, rgba(245, 245, 220, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+header.container {
+  background: linear-gradient(145deg, rgba(210, 105, 30, 0.1) 0%, rgba(139, 69, 19, 0.1) 100%);
+  border-radius: 1rem 1rem 0 0;
+  margin-bottom: 0;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header strong {
+  font-size: 1.8rem;
+  color: var(--primary);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
